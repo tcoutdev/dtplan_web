@@ -1,0 +1,37 @@
+<div class="container">
+  <aside class="sidebar">
+    <ul>
+      <li (click)="selecionarOpcao('perfil')" [class.selected]="opcaoSelecionada === 'perfil'">
+        <a><i class="fas fa-user"></i> Perfil</a>
+      </li>
+      <li (click)="selecionarOpcao('dieta')" [class.selected]="opcaoSelecionada === 'dieta'">
+        <a><i class="fas fa-utensils"></i> Dieta</a>
+      </li>
+      <li (click)="selecionarOpcao('treino')" [class.selected]="opcaoSelecionada === 'treino'">
+        <a><i class="fas fa-dumbbell"></i> Treino</a>
+      </li>
+      <li (click)="selecionarOpcao('configuracoes')" [class.selected]="opcaoSelecionada === 'configuracoes'">
+        <a><i class="fas fa-cog"></i> Configurações</a>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <div *ngIf="opcaoSelecionada === 'perfil'">
+      <h2>Perfil do Usuário</h2>
+      <p>Informações do perfil do usuário aqui...</p>
+    </div>
+    <div *ngIf="opcaoSelecionada === 'dieta'">
+      <h2>Dieta</h2>
+      <p>Informações sobre a dieta aqui...</p>
+    </div>
+    <div *ngIf="opcaoSelecionada === 'treino'">
+      <h2>Treino</h2>
+      <p>Informações sobre treinos aqui...</p>
+    </div>
+    <div *ngIf="opcaoSelecionada === 'configuracoes'">
+      <h2>Configurações</h2>
+      <p>Configurações do usuário aqui...</p>
+    </div>
+  </main>
+</div>

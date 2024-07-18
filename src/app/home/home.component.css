@@ -1,0 +1,73 @@
+/* Reset de estilos básicos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo geral da tela */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos da barra lateral */
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #555;
+}
+
+/* Estilos do conteúdo principal */
+.main-content {
+  flex: 1;
+  margin-left: 200px; /* Deixa espaço para a barra lateral */
+  padding: 20px;
+}
+
+.main-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Estilo para o item selecionado na barra lateral */
+.sidebar ul li.selected {
+  background-color: #555;
+}
