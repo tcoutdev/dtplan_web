@@ -1,0 +1,38 @@
+<app-default-cadastro-layout
+  title="Cadastro"
+  primaryBtnText="Sign Up"
+  secondaryBtnText="Back to Login"
+  (submit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!cadastroForm.valid"
+>
+  <form [formGroup]="cadastroForm">
+    <app-primary-input
+      formControlName="email"
+      inputName="email"
+      type="email"
+      label="Email"
+      placeholder="johndoe@gmail.com"
+    >
+      <img src="/assets/svg/email-icon.svg" />
+    </app-primary-input>
+    <app-primary-input
+      formControlName="password"
+      inputName="password"
+      type="password"
+      label="Password"
+      placeholder="********"
+    >
+      <img src="/assets/svg/password-icon.svg" />
+    </app-primary-input>
+    <app-primary-input
+      formControlName="confirmarSenha"
+      inputName="confirmarSenha"
+      type="password"
+      label="Confirm Password"
+      placeholder="********"
+    >
+      <img src="/assets/svg/password-icon.svg" />
+    </app-primary-input>
+  </form>
+</app-default-cadastro-layout>

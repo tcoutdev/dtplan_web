@@ -1,0 +1,56 @@
+@import "../../../styles.scss";
+
+form {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    span {
+      font-size: 14px;
+      text-decoration: underline;
+      color: $secondary-color;
+      text-align: end;
+  }
+  }
+
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: $secondary-color;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
